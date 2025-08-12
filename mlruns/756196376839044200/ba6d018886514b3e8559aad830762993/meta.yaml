@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ruslanmamedov/projects/market-ec/mlruns/756196376839044200/ba6d018886514b3e8559aad830762993/artifacts
+end_time: 1755022374871
+entry_point_name: ''
+experiment_id: '756196376839044200'
+lifecycle_stage: active
+run_id: ba6d018886514b3e8559aad830762993
+run_name: backtest_var
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755022374857
+status: 3
+tags: []
+user_id: ruslanmamedov

@@ -1,0 +1,10 @@
+{
+  "historical_results": [
+    {
+      "name": "COVID_2020",
+      "cum_return": -0.12444866429720447,
+      "max_drawdown": -0.24593599668755606,
+      "n_days": 41
+    }
+  ]
+}

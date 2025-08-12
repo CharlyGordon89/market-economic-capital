@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ruslanmamedov/projects/market-ec/mlruns/756196376839044200/e0181b3f407146b59fb203198263d9d2/artifacts
+end_time: 1755025114397
+entry_point_name: ''
+experiment_id: '756196376839044200'
+lifecycle_stage: active
+run_id: e0181b3f407146b59fb203198263d9d2
+run_name: simulate_portfolio
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755025112071
+status: 3
+tags: []
+user_id: root

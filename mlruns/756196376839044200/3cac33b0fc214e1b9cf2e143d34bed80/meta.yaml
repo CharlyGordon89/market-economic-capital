@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ruslanmamedov/projects/market-ec/mlruns/756196376839044200/3cac33b0fc214e1b9cf2e143d34bed80/artifacts
+end_time: 1755022362879
+entry_point_name: ''
+experiment_id: '756196376839044200'
+lifecycle_stage: active
+run_id: 3cac33b0fc214e1b9cf2e143d34bed80
+run_name: stress_tests
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755022361506
+status: 3
+tags: []
+user_id: ruslanmamedov

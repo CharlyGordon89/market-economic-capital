@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/ruslanmamedov/projects/market-ec/mlruns/756196376839044200/84c68144da2943f8b85959329fa9ae70/artifacts
+end_time: 1755016913939
+entry_point_name: ''
+experiment_id: '756196376839044200'
+lifecycle_stage: active
+run_id: 84c68144da2943f8b85959329fa9ae70
+run_name: calibrate_models
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755016913933
+status: 4
+tags: []
+user_id: ruslanmamedov

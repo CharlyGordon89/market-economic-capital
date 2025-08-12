@@ -1,0 +1,68 @@
+project: market-ec
+mlflow:
+  experiment: market-ec-dev
+artifacts:
+  data_dir: data
+  models_dir: models
+  risk_dir: risk
+  dashboard_dir: dashboard
+run:
+  experiment_name: "market-ec-dev"
+  random_seed: 42
+
+data:
+  source: "auto"   # was "yahoo"
+  tickers: [SPY, EFA, EEM, IEF, UUP, GLD, USO]
+  start: "2005-01-01"   # rename from start_date
+  end: null             # rename from end_date
+  interval: "1d"
+
+models:
+  gbm_tickers: [SPY, EFA, EEM, GLD, USO]
+  ou_tickers: [IEF] # OU on log-price level (rates proxy via ETF)
+  garch_tickers: [SPY, EFA, EEM, IEF, UUP, GLD, USO]
+dependence:
+  method: gaussian # gaussian | t
+  t_df: 6 # used if method == t
+  tickers: [SPY, EFA, EEM, IEF, UUP, GLD, USO]
+portfolio:
+  # weights over tickers used in dependence.tickers (will be intersected & renormalized if needed)
+  weights:
+    SPY: 0.40
+    EFA: 0.20
+    EEM: 0.15
+    IEF: 0.15
+    UUP: 0.05
+    GLD: 0.05
+    # If USO is missing, it's fine; we intersect automatically
+risk:
+  horizon_days: 252
+  n_sims: 10000 # adjust if memory is tight
+  alphas: [0.995, 0.999] # for VaR/ES
+  save_samples: true # set true to save a sample of P&L draws
+# --- existing content above ---
+stress:
+  # historical stress windows (inclusive)
+  historical:
+    - {name: "GFC_2008", start: "2008-09-01", end: "2009-03-31"}
+    - {name: "COVID_2020", start: "2020-02-15", end: "2020-04-15"}
+  # parametric stress scenarios (applied to sim engine)
+  parametric:
+    - {name: "HiVol_HiCorr", vol_scale: 1.50, rho_scale: 1.20}
+    - {name: "HiVol", vol_scale: 1.50, rho_scale: 1.00}
+    - {name: "HiCorr", vol_scale: 1.00, rho_scale: 1.20}
+backtest:
+  var_method: "historical" # "historical" (robust baseline)
+  window_days: 250 # rolling window length
+  alpha: 0.99 # 1-day VaR level
+  start: "2010-01-01" # backtest period
+  end: null
+
+
+# configs/base.yaml
+data:
+  source: auto        # auto | yahoo | stooq
+  tickers: [SPY, EFA, EEM, IEF, UUP, GLD, USO]
+  start: 2005-01-01
+  end: null
+  interval: 1d
