@@ -26,3 +26,7 @@ models/
 
 # OS files
 .DS_Store
+# Allow source data package
+!src/market_ec/data/
+!src/market_ec/data/*
+src/market_ec/data/__pycache__/
