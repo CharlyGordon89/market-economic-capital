@@ -12,7 +12,7 @@ env/
 data/
 dashboard/
 risk/
-models/
+/models/
 *.parquet
 *.csv
 *.xlsx
